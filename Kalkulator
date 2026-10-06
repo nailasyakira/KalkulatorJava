@@ -128,3 +128,119 @@ public class Kalkulator {
                                         hapusDesimalNol(nilaiA * nilaiB)
                                     );
                                 }
+                                else if (operator == "÷") {
+                                    tampilan.setText(
+                                        hapusDesimalNol(nilaiA / nilaiB)
+                                    );
+                                }
+
+                                bersihkanSemua();
+                            }
+                        }
+
+                        // Jika tombol +, -, ×, atau ÷ ditekan
+                        else if ("+-×÷".contains(nilaiTombol)) {
+
+                            if (operator == null) {
+
+                                angkaA = tampilan.getText();
+                                tampilan.setText("0");
+                                angkaB = "0";
+                            }
+
+                            operator = nilaiTombol;
+                        }
+                    }
+
+                    // Jika tombol AC, +/-, atau % ditekan
+                    else if (Arrays.asList(simbolAtas).contains(nilaiTombol)) {
+
+                        // Tombol AC
+                        if (nilaiTombol == "AC") {
+
+                            bersihkanSemua();
+                            tampilan.setText("0");
+                        }
+
+                        // Tombol +/-
+                        else if (nilaiTombol == "+/-") {
+
+                            double nilaiTampilan =
+                                Double.parseDouble(tampilan.getText());
+
+                            nilaiTampilan *= -1;
+
+                            tampilan.setText(
+                                hapusDesimalNol(nilaiTampilan)
+                            );
+                        }
+                        // Tombol %
+                        else if (nilaiTombol == "%") {
+
+                            double nilaiTampilan =
+                                Double.parseDouble(tampilan.getText());
+
+                            nilaiTampilan /= 100;
+
+                            tampilan.setText(
+                                hapusDesimalNol(nilaiTampilan)
+                            );
+                        }
+                    }
+
+                    // Jika tombol angka atau titik ditekan
+                    else {
+
+                        // Tombol titik
+                        if (nilaiTombol == ".") {
+
+                            if (!tampilan.getText().contains(nilaiTombol)) {
+
+                                tampilan.setText(
+                                    tampilan.getText() + nilaiTombol
+                                );
+                            }
+                        }
+
+                        // Tombol angka 0-9
+                        else if ("0123456789".contains(nilaiTombol)) {
+
+                            if (tampilan.getText() == "0") {
+
+                                tampilan.setText(nilaiTombol);
+                            }
+
+                            else {
+
+                                tampilan.setText(
+                                    tampilan.getText() + nilaiTombol
+                                );
+                            }
+                        }
+                    }
+                }
+            });
+
+            layar.setVisible(true);
+        }
+    }
+
+    // Menghapus semua data perhitungan
+    void bersihkanSemua() {
+
+        angkaA = "0";
+        operator = null;
+        angkaB = null;
+    }
+
+    // Menghilangkan .0 pada hasil bilangan bulat
+    String hapusDesimalNol(double nilaiTampilan) {
+
+        if (nilaiTampilan % 1 == 0) {
+
+            return Integer.toString((int) nilaiTampilan);
+        }
+
+        return Double.toString(nilaiTampilan);
+    }
+}
