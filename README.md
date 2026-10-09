@@ -12,26 +12,38 @@ Aplikasi Kalkulator Java dibuat untuk membantu pengguna melakukan perhitungan ma
 
 ### Fitur
 
-- Penjumlahan (+)
-- Pengurangan (-)
-- Perkalian (×)
-- Pembagian (÷)
-- Persentase (%)
-- Positif/Negatif (+/-)
-- Bilangan desimal (.)
-- Reset (AC)
-
-### Struktur 
-
-- App.java → file utama untuk menjalankan program.
-- Kalkulator.java → berisi tampilan dan fungsi kalkulator.
+- Penjumlahan (+) untuk menjumlahkan dua bilangan.
+- Pengurangan (-) untuk menghitung selisih dua bilangan.
+- Perkalian (×) untuk mengalikan dua bilangan.
+- Pembagian (÷) untuk membagi dua bilangan.
+- Persentase (%) untuk melakukan perhitungan persentase.
+- Positif/Negatif (+/-) untuk mengubah tanda bilangan.
+- Bilangan Desimal (.) untuk memasukkan angka desimal.
+- Reset (AC) untuk menghapus input dan mengatur ulang perhitungan.
+- Akar Kuadrat (√) untuk menghitung akar kuadrat jika fungsi ini telah diterapkan pada source code.
 
 ### Teknologi
 
 - **Java** sebagai bahasa pemrograman.
 - **Java Swing** untuk membuat komponen GUI seperti JFrame, JButton, JLabel, dan JPanel.
 - **AWT (Abstract Window Toolkit)** untuk mendukung pengaturan warna, font, layout, dan event pada GUI.
+- **JDK (Java Development Kit)** Digunakan untuk mengompilasi dan menjalankan program Java.
+- **GitHub** Digunakan untuk menyimpan dan mempublikasikan source code.
 
+### Struktur Proyek
+
+Struktur file utama dalam proyek ini adalah sebagai berikut:
+
+Kalkulator-Java/
+├── App.java
+├── Kalkulator.java
+└── README.md
+
+**Keterangan:**
+- App.java merupakan file utama untuk menjalankan aplikasi.
+- Kalkulator.java berisi tampilan antarmuka dan fungsi kalkulator.
+- README.md berisi dokumentasi proyek, fitur, dan petunjuk penggunaan.
+  
 ### Cara Menjalankan/Instalasi
 
 Pastikan Java Development Kit (JDK) sudah terpasang pada komputer.
@@ -69,30 +81,13 @@ Masukkan angka, pilih operator, masukkan angka kedua, kemudian tekan = untuk men
 
 ### Contoh I/O
 
-Contoh 1: Penjumlahan
-
-Input: 10 + 5
-Output: 15
-
-Contoh 2: Pengurangan
-
-Input: 10 - 4
-Output: 6
-
-Contoh 3: Perkalian
-
-Input: 6 × 3
-Output: 18
-
-Contoh 4: Pembagian
-
-Input: 20 ÷ 4
-Output: 5
-
-Contoh 5: Persentase
-
-Input: 50%
-Output: Sesuai dengan implementasi fungsi persentase pada aplikasi.
+| Operasi | Input | Output |
+| :--- | :--- | :--- |
+| Penjumlahan | 10 + 5 | 15 |
+| Pengurangan | 10 - 4 | 6 |
+| Perkalian | 6 × 3 | 18 |
+| Pembagian | 20 ÷ 4 | 5 |
+| Desimal | 2.5 + 1.5 | 4 |
 
 ### Catatan Penggunaan
 
